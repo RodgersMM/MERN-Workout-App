@@ -2,17 +2,17 @@
 //Require mongoose
 const mongoose = require('mongoose')
 
-//Creating Schema
+//Creating Schema Variable
 
 const Schema = mongoose.Schema
 
-//Customising Schema
+//Creating Schema
 const workoutSchema = new Schema({
     title : {
         type :  String,
         required : true,
     },
-    resp: {
+    reps: {
         type: Number,
         required : true,
     },
@@ -28,4 +28,4 @@ const workoutSchema = new Schema({
 //Create Model using Schema
 
 
-module.exports = mongoose.model('workout',workoutSchema )
+module.exports = mongoose.model('workout', workoutSchema )
