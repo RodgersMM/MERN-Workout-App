@@ -3,6 +3,9 @@ const express = require ('express')
 //Require dotenv file
 require('dotenv').config()
 const mongoose = require('mongoose')
+const cors = require ('cors')
+
+
 //Require Routes
 const workoutRoutes = require('./routes/workouts.js')
 
@@ -11,6 +14,12 @@ const workoutRoutes = require('./routes/workouts.js')
 const app = express()
 
 //Global Middleware
+
+//respond to any request from any port request
+app.use(cors({
+    origin: '*'
+  }));
+
 
 app.use(express.json())
 

@@ -4,15 +4,22 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev" : "nodemon server.js",
-    "start": "node server.js"
+    "start": "concurrently \"npm run server\" \"cd ../frontend && npm start\"",
+    "server": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "binary-extensions": "^2.2.0",
+    "concurrently": "^8.0.1",
+    "config": "^3.3.9",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "nodemon": "^2.0.21"
+    "mongoose": "^7.0.3",
+    "nodemon": "^2.0.22",
+    "package-name": "^0.1.0"
   }
 }
